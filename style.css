@@ -1,4 +1,8 @@
 /* CSS */
+html {
+background-color: #09223b;
+padding: 2%;
+}
 
 .insertTextArea {
   width: 100%;
@@ -24,6 +28,7 @@
   min-width: 0px;
   overflow: hidden;
   padding: 0px;
+  margin: 10px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
@@ -63,17 +68,17 @@ summary {
 details[open] summary {border-radius: 5px 5px 0 0;}
 
 details {
-  background: #b1cadf;
+  background: #ffffff;
   border-radius: 5px;
+  padding: 10px;
 }
 
 /* extra styles */
 
 * {box-sizing: border-box;}
-body {font-family: system-ui, sans-serif; margin: 20px; background: #fff9f1;}
-h1 {font-size: 1.2em;}
+body {font-family: system-ui, sans-serif; margin: 20px;}
+h1 {font-size: 1.2em; color: #ffffff;}
 article > *:first-child {margin: 0;}
 article > * + * {margin: 0.75em 0 0 0;}
 pre {color: white; background: #455e7b; padding: 1em; border-radius: 5px;}
 article {padding: 10px; margin: 0;}
-details code {font-size: 1.1em;}
