@@ -1,4 +1,10 @@
 /* CSS */
+
+.insertTextArea {
+  width: 100%;
+  min-width: 100%;
+}
+
 .button-18 {
   align-items: center;
   background-color: #0A66C2;
@@ -44,3 +50,30 @@
   background: rgba(0, 0, 0, .08);
   color: rgba(0, 0, 0, .3);
 }
+
+/* estilos do accordion details*/
+
+summary {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+details[open] summary {border-radius: 5px 5px 0 0;}
+
+details {
+  background: #b1cadf;
+  border-radius: 5px;
+}
+
+/* extra styles */
+
+* {box-sizing: border-box;}
+body {font-family: system-ui, sans-serif; margin: 20px; background: #fff9f1;}
+h1 {font-size: 1.2em;}
+article > *:first-child {margin: 0;}
+article > * + * {margin: 0.75em 0 0 0;}
+pre {color: white; background: #455e7b; padding: 1em; border-radius: 5px;}
+article {padding: 10px; margin: 0;}
+details code {font-size: 1.1em;}
