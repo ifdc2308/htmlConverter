@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor HTML</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tinymce/tinymce-webcomponent@2/dist/tinymce-webcomponent.min.js"></script>
 </head>
 
 <body>
@@ -21,13 +23,25 @@
     </a>
     <h1>Adicione para converter texto para HTML</h1>
     <section>
-        <textarea rows="10" id="valorInserido" class="insertTextArea"></textarea>
-        <button type="submit" id="submitBtn" class="button-18" role="button">
+        <!-- <textarea rows="10" id="valorInserido" class="insertTextArea"></textarea> -->
+        <tinymce-editor id="textEditor" api-key="su59e7h0mpqs8jv12lakw5vhu5do6j626dyw7jm3077nmupi" height="300"
+            menubar="false" plugins="advlist autolink lists link image charmap preview anchor
+          searchreplace visualblocks code fullscreen
+          insertdatetime media table code help wordcount" toolbar="undo redo | blocks | bold italic backcolor |
+          alignleft aligncenter alignright alignjustify |
+          bullist numlist outdent indent | removeformat | help" content_style="body
+        {
+          font-family:Helvetica,Arial,sans-serif;
+          font-size:14px
+        }">
+
+        </tinymce-editor>
+        <button type="submit" id="submitText" class="button-18" role="button">
             Aplicar
         </button>
         <details open>
             <summary>Resultado do conteúdo HTML</summary>
-            <div id="resultado"></div>
+            <div id="resultadoText"></div>
         </details>
     </section>
     <script src="script.js"></script>
