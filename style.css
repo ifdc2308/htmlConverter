@@ -3,7 +3,7 @@ html {
   /* background-color: #c0c0c0; */
   padding-inline: 5%;
   padding-block: 1%;
-  background-image: url("./assets/background.jpg");
+  background-image: url("./assets/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
