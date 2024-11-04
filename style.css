@@ -1,6 +1,6 @@
 /* CSS */
 html {
-background-color: #09223b;
+background-color: #c0c0c0;
 padding: 2%;
 }
 
@@ -13,7 +13,7 @@ padding: 2%;
   align-items: center;
   background-color: #0A66C2;
   border: 0;
-  border-radius: 100px;
+  border-radius: 5px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
@@ -76,8 +76,8 @@ details {
 /* extra styles */
 
 * {box-sizing: border-box;}
-body {font-family: system-ui, sans-serif; margin: 20px;}
-h1 {font-size: 1.2em; color: #ffffff;}
+body {font-family: system-ui, sans-serif; padding: 50px;}
+h1 {font-size: 1.2em; color: #414141;}
 article > *:first-child {margin: 0;}
 article > * + * {margin: 0.75em 0 0 0;}
 pre {color: white; background: #455e7b; padding: 1em; border-radius: 5px;}
