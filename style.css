@@ -3,13 +3,17 @@ html {
   /* background-color: #c0c0c0; */
   padding-inline: 5%;
   padding-block: 1%;
-  background-image: url("./assets/bg.jpg");
+  background-image: url("./assets/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   @media (max-width: 500px) {
     padding: 0;
   }
+}
+
+*:focus {
+  outline: none;
 }
 
 .insertTextArea {
