@@ -1,7 +1,15 @@
 /* CSS */
 html {
-background-color: #c0c0c0;
-padding: 2%;
+  /* background-color: #c0c0c0; */
+  padding-inline: 5%;
+  padding-block: 1%;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 }
 
 .insertTextArea {
@@ -11,14 +19,17 @@ padding: 2%;
 
 .button-18 {
   align-items: center;
-  background-color: #0A66C2;
+  background-color: #0a66c2;
   border: 0;
   border-radius: 5px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -33,39 +44,43 @@ padding: 2%;
   padding-right: 20px;
   text-align: center;
   touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
 }
 
 .button-18:hover,
-.button-18:focus { 
-  background-color: #16437E;
+.button-18:focus {
+  background-color: #16437e;
   color: #ffffff;
 }
 
 .button-18:active {
   background: #09223b;
-  color: rgb(255, 255, 255, .7);
+  color: rgb(255, 255, 255, 0.7);
 }
 
-.button-18:disabled { 
+.button-18:disabled {
   cursor: not-allowed;
-  background: rgba(0, 0, 0, .08);
-  color: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* estilos do accordion details*/
 
 summary {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
   padding: 10px;
   border-radius: 5px;
 }
 
-details[open] summary {border-radius: 5px 5px 0 0;}
+details[open] summary {
+  border-radius: 5px 5px 0 0;
+}
 
 details {
   background: #ffffff;
@@ -75,10 +90,30 @@ details {
 
 /* extra styles */
 
-* {box-sizing: border-box;}
-body {font-family: system-ui, sans-serif; padding: 50px;}
-h1 {font-size: 1.2em; color: #414141;}
-article > *:first-child {margin: 0;}
-article > * + * {margin: 0.75em 0 0 0;}
-pre {color: white; background: #455e7b; padding: 1em; border-radius: 5px;}
-article {padding: 10px; margin: 0;}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, sans-serif;
+  padding: 50px;
+}
+h1 {
+  font-size: 1.2em;
+  color: #414141;
+}
+article > *:first-child {
+  margin: 0;
+}
+article > * + * {
+  margin: 0.75em 0 0 0;
+}
+pre {
+  color: white;
+  background: #455e7b;
+  padding: 1em;
+  border-radius: 5px;
+}
+article {
+  padding: 10px;
+  margin: 0;
+}
