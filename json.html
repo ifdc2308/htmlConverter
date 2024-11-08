@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to Excel Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            gap: 20px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <!-- Importando a biblioteca SheetJS -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+    <h1>Conversor JSON para Excel</h1>
+    <input type="file" id="jsonInput" accept=".json">
+    <button onclick="convertToExcel()">Converter para Excel</button>
+
+    <script>
+        function convertToExcel() {
+            const input = document.getElementById('jsonInput');
+            const file = input.files[0];
+
+            if (!file) {
+                alert("Por favor, selecione um arquivo JSON.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    // Carregar o conteúdo do JSON
+                    const jsonData = JSON.parse(event.target.result);
+
+                    // Verificar se o JSON é uma lista de objetos
+                    if (!Array.isArray(jsonData)) {
+                        alert("O arquivo JSON deve conter uma lista de objetos.");
+                        return;
+                    }
+
+                    // Converter para uma planilha usando SheetJS
+                    const worksheet = XLSX.utils.json_to_sheet(jsonData);
+                    const workbook = XLSX.utils.book_new();
+                    XLSX.utils.book_append_sheet(workbook, worksheet, "Dados");
+
+                    // Baixar o arquivo Excel
+                    XLSX.writeFile(workbook, "dados_convertidos.xlsx");
+                    alert("Arquivo Excel gerado com sucesso!");
+                } catch (error) {
+                    alert("Erro ao processar o arquivo JSON.");
+                    console.error(error);
+                }
+            };
+
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>
